@@ -16,9 +16,11 @@
       </div>
     </div>
     <div class="dashboard-row">
-      <OEEChart />
-      <TrendPanel />
-      <FaultPie />
+      <OEEPanel />
+      <div class="side-col">
+        <TrendPanel />
+        <FaultPie />
+      </div>
     </div>
   </div>
 </template>
@@ -28,7 +30,7 @@ import { onMounted, onUnmounted } from 'vue'
 import FactoryScene from './components/FactoryScene.vue'
 import DeviceList from './components/DeviceList.vue'
 import AnomalyList from './components/AnomalyList.vue'
-import OEEChart from './components/OEEChart.vue'
+import OEEPanel from './components/OEEPanel.vue'
 import TrendPanel from './components/TrendPanel.vue'
 import FaultPie from './components/FaultPie.vue'
 import { useFactoryStore } from './store/factory'
@@ -50,5 +52,6 @@ body{font-family:system-ui,sans-serif;background:#0a1628;color:#e0e6ed;overflow-
 .main-grid{display:grid;grid-template-columns:1fr 360px;gap:12px;padding:12px 24px;min-height:55vh}
 .scene-col{background:#0d1b2a;border-radius:12px;border:1px solid #1e3a5f;overflow:hidden}
 .panel-col{display:flex;flex-direction:column;gap:12px;overflow-y:auto;max-height:55vh}
-.dashboard-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;padding:0 24px 16px}
+.dashboard-row{display:grid;grid-template-columns:1.4fr 1fr;gap:12px;padding:0 24px 16px}
+.side-col{display:flex;flex-direction:column;gap:12px}
 </style>
