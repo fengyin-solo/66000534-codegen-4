@@ -19,6 +19,7 @@
       <OEEChart />
       <TrendPanel />
       <FaultPie />
+      <BelowLimitList />
     </div>
   </div>
 </template>
@@ -31,6 +32,7 @@ import AnomalyList from './components/AnomalyList.vue'
 import OEEChart from './components/OEEChart.vue'
 import TrendPanel from './components/TrendPanel.vue'
 import FaultPie from './components/FaultPie.vue'
+import BelowLimitList from './components/BelowLimitList.vue'
 import { useFactoryStore } from './store/factory'
 const store = useFactoryStore()
 onMounted(() => store.connect())
@@ -50,5 +52,5 @@ body{font-family:system-ui,sans-serif;background:#0a1628;color:#e0e6ed;overflow-
 .main-grid{display:grid;grid-template-columns:1fr 360px;gap:12px;padding:12px 24px;min-height:55vh}
 .scene-col{background:#0d1b2a;border-radius:12px;border:1px solid #1e3a5f;overflow:hidden}
 .panel-col{display:flex;flex-direction:column;gap:12px;overflow-y:auto;max-height:55vh}
-.dashboard-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;padding:0 24px 16px}
+.dashboard-row{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;padding:0 24px 16px}
 </style>
